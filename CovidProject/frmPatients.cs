@@ -52,5 +52,22 @@ namespace CovidProject
         {
 
         }
+
+        private void saveToolStripButton_Click(object sender, EventArgs e)
+        {
+            if (txtName.Text.Trim() == "")
+            {
+                MessageBox.Show("Please enter the patient name");
+                txtName.Focus();
+                return;
+            }
+
+            if (txtIdNo.Text.Trim() == "")
+            {
+                MessageBox.Show("Please enter the Id name");
+                txtIdNo.Focus();
+                return;
+            }
+        }
     }
 }
