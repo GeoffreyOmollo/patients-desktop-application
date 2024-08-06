@@ -1,0 +1,10 @@
+C:\Users\Geoffrey\Desktop\My Projects\Desktop\CovidProject\CovidProject\bin\Debug\CovidProject.exe.config
+C:\Users\Geoffrey\Desktop\My Projects\Desktop\CovidProject\CovidProject\bin\Debug\CovidProject.exe
+C:\Users\Geoffrey\Desktop\My Projects\Desktop\CovidProject\CovidProject\bin\Debug\CovidProject.pdb
+C:\Users\Geoffrey\Desktop\My Projects\Desktop\CovidProject\CovidProject\obj\Debug\CovidProject.csproj.AssemblyReference.cache
+C:\Users\Geoffrey\Desktop\My Projects\Desktop\CovidProject\CovidProject\obj\Debug\CovidProject.frmPatients.resources
+C:\Users\Geoffrey\Desktop\My Projects\Desktop\CovidProject\CovidProject\obj\Debug\CovidProject.Properties.Resources.resources
+C:\Users\Geoffrey\Desktop\My Projects\Desktop\CovidProject\CovidProject\obj\Debug\CovidProject.csproj.GenerateResource.cache
+C:\Users\Geoffrey\Desktop\My Projects\Desktop\CovidProject\CovidProject\obj\Debug\CovidProject.csproj.CoreCompileInputs.cache
+C:\Users\Geoffrey\Desktop\My Projects\Desktop\CovidProject\CovidProject\obj\Debug\CovidProject.exe
+C:\Users\Geoffrey\Desktop\My Projects\Desktop\CovidProject\CovidProject\obj\Debug\CovidProject.pdb
