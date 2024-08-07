@@ -43,12 +43,8 @@ namespace CovidProject
         {
             currentId = 0;
 
-            txtName.Text = "";
-            txtIdNo.Text = "";
-            dtpDOB.Value = DateTime.Today;
-            cmbGender.SelectedIndex = -1;
-            txtCountry.Text = "";
-            chkIsActive.Checked = true;
+            clearText();
+
             txtName.Focus();
         }
 
@@ -140,5 +136,50 @@ namespace CovidProject
             conn.Close();
         }
 
+        private void cutToolStripButton_Click(object sender, EventArgs e)
+        {
+            if (currentId <= 0)
+            {
+                MessageBox.Show("Please select an item to delete", this.Text, MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                return;
+            }
+
+            DialogResult result = MessageBox.Show("Are you sure you want to delete the selected item?", this.Text, MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2);
+
+
+            if (result == DialogResult.No)
+                return;
+
+
+            SqlConnection conn = new SqlConnection();
+            conn.ConnectionString = @"Data Source=DESKTOP-D1LT6IQ\SQLEXPRESS; Initial Catalog=CovidPatients; User ID=sa; Password=omollo13829";
+
+            conn.Open();
+
+            string sql = "";
+            sql = "DELETE FROM tblPatients WHERE PatientId = " + currentId;            
+            MessageBox.Show(sql);
+
+            SqlCommand cmd = new SqlCommand(sql, conn);
+            cmd.ExecuteNonQuery();
+
+            conn.Close();
+
+            MessageBox.Show("Process Completed Sucessfully");
+            currentId = 0;
+            clearText();
+            txtName.Focus();
+
+        }
+
+        private void clearText()
+        {
+            txtName.Text = "";
+            txtIdNo.Text = "";
+            dtpDOB.Value = DateTime.Today;
+            cmbGender.SelectedIndex = -1;
+            txtCountry.Text = "";
+            chkIsActive.Checked = true;
+        }
     }
 }

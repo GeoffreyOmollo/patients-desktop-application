@@ -184,7 +184,7 @@
             this.helpToolStripButton});
             this.toolStrip1.Location = new System.Drawing.Point(0, 0);
             this.toolStrip1.Name = "toolStrip1";
-            this.toolStrip1.Size = new System.Drawing.Size(898, 33);
+            this.toolStrip1.Size = new System.Drawing.Size(898, 38);
             this.toolStrip1.TabIndex = 12;
             this.toolStrip1.Text = "toolStrip1";
             // 
@@ -194,7 +194,7 @@
             this.newToolStripButton.Image = ((System.Drawing.Image)(resources.GetObject("newToolStripButton.Image")));
             this.newToolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.newToolStripButton.Name = "newToolStripButton";
-            this.newToolStripButton.Size = new System.Drawing.Size(34, 28);
+            this.newToolStripButton.Size = new System.Drawing.Size(34, 33);
             this.newToolStripButton.Text = "&New";
             this.newToolStripButton.Click += new System.EventHandler(this.newToolStripButton_Click);
             // 
@@ -238,8 +238,9 @@
             this.cutToolStripButton.Image = ((System.Drawing.Image)(resources.GetObject("cutToolStripButton.Image")));
             this.cutToolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.cutToolStripButton.Name = "cutToolStripButton";
-            this.cutToolStripButton.Size = new System.Drawing.Size(34, 28);
-            this.cutToolStripButton.Text = "C&ut";
+            this.cutToolStripButton.Size = new System.Drawing.Size(34, 33);
+            this.cutToolStripButton.Text = "&Delete";
+            this.cutToolStripButton.Click += new System.EventHandler(this.cutToolStripButton_Click);
             // 
             // copyToolStripButton
             // 
