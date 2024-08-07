@@ -90,5 +90,11 @@ namespace CovidProject
             MessageBox.Show("Process Completed Sucessfully");
 
         }
+
+        private void openToolStripButton_Click(object sender, EventArgs e)
+        {
+            frmSearchPatients frm = new frmSearchPatients();
+            frm.ShowDialog();
+        }
     }
 }
