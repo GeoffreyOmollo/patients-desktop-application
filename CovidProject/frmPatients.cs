@@ -95,6 +95,36 @@ namespace CovidProject
         {
             frmSearchPatients frm = new frmSearchPatients();
             frm.ShowDialog();
+            displayInfo(frm.selectedInteger);
         }
+
+        private void displayInfo(int id)
+        {
+            SqlConnection conn = new SqlConnection();
+            conn.ConnectionString = @"Data Source=DESKTOP-D1LT6IQ\SQLEXPRESS; Initial Catalog=CovidPatients; User ID=sa; Password=omollo13829";
+            //conn.ConnectionString = @" Server = DESKTOP - D1LT6IQ\SQLEXPRESS; Database = CovidPatients; Integrated Security = True";
+
+            conn.Open();
+
+            string sql = "";
+            sql = "SELECT * FROM tblPatients WHERE PatientId = " + id;
+            SqlCommand cmd = new SqlCommand(sql, conn);
+            SqlDataReader sqlDataReader = cmd.ExecuteReader();
+
+            if (sqlDataReader.Read())
+            {
+
+                txtName.Text = sqlDataReader[1].ToString();
+                txtIdNo.Text = sqlDataReader[2].ToString();
+                dtpDOB.Value = DateTime.Parse(sqlDataReader[3].ToString());
+                cmbGender.Text = sqlDataReader[4].ToString();
+                txtCountry.Text = sqlDataReader[5].ToString();
+                chkIsActive.Checked = bool.Parse(sqlDataReader[6].ToString());
+
+            }
+
+            conn.Close();
+        }
+
     }
 }

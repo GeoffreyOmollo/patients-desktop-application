@@ -14,6 +14,7 @@ namespace CovidProject
 {
     public partial class frmSearchPatients : Form
     {
+        public int selectedInteger { get; set; }
         public frmSearchPatients()
         {
             InitializeComponent();
@@ -53,8 +54,22 @@ namespace CovidProject
         private void lvwList_SelectedIndexChanged(object sender, EventArgs e)
         {
             if (lvwList.FocusedItem == null) return;
+
             int i = lvwList.FocusedItem.Index;
             label1.Text = lvwList.Items[i].Text + " Name: " + lvwList.Items[i].SubItems[1].Text +"," + " IdNo: " + lvwList.Items[i].SubItems[2].Text;
+
+            this.selectedInteger = int.Parse(lvwList.Items[i].Text);
+
+        }
+
+        private void lvwList_DoubleClick(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void frmSearchPatients_DoubleClick(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

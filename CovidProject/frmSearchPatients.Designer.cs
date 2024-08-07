@@ -61,6 +61,7 @@
             this.lvwList.UseCompatibleStateImageBehavior = false;
             this.lvwList.View = System.Windows.Forms.View.Details;
             this.lvwList.SelectedIndexChanged += new System.EventHandler(this.lvwList_SelectedIndexChanged);
+            this.lvwList.DoubleClick += new System.EventHandler(this.lvwList_DoubleClick);
             // 
             // columnHeader1
             // 
@@ -118,6 +119,7 @@
             this.ShowInTaskbar = false;
             this.Text = "Search Patients";
             this.Load += new System.EventHandler(this.frmSearchPatients_Load);
+            this.DoubleClick += new System.EventHandler(this.frmSearchPatients_DoubleClick);
             this.ResumeLayout(false);
             this.PerformLayout();
 
