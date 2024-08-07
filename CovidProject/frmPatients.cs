@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -68,6 +69,26 @@ namespace CovidProject
                 txtIdNo.Focus();
                 return;
             }
+
+            SqlConnection conn = new SqlConnection();
+            conn.ConnectionString = @"Data Source=DESKTOP-D1LT6IQ\SQLEXPRESS; Initial Catalog=CovidPatients; User ID=sa; Password=omollo13829";
+            //conn.ConnectionString = @" Server = DESKTOP - D1LT6IQ\SQLEXPRESS; Database = CovidPatients; Integrated Security = True";
+           
+            conn.Open();
+
+            int checkedValue = 0;
+            if (chkIsActive.Checked) checkedValue = 1;
+
+            string sql = "";
+            sql = "INSERT INTO tblPatients(Name, IdNo, DOB, Gender, Country, IsActive) VALUES ('" + txtName.Text + "', " + txtIdNo.Text + ", '" + dtpDOB.Value.ToString("yyyyMMdd") + "', '" + cmbGender.Text + "', '" + txtCountry.Text + "', " + checkedValue + "   )   ";
+                        
+            SqlCommand cmd = new SqlCommand(sql, conn);
+            cmd.ExecuteNonQuery();
+
+            conn.Close();
+
+            MessageBox.Show("Process Completed Sucessfully");
+
         }
     }
 }
