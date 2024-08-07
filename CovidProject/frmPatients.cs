@@ -181,5 +181,15 @@ namespace CovidProject
             txtCountry.Text = "";
             chkIsActive.Checked = true;
         }
+
+        private void cmbGender_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtIdNo_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
