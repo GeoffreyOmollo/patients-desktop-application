@@ -13,6 +13,7 @@ namespace CovidProject
 {
     public partial class frmPatients : Form
     {
+        int currentId = 0;
         public frmPatients()
         {
             InitializeComponent();
@@ -40,6 +41,8 @@ namespace CovidProject
 
         private void newToolStripButton_Click(object sender, EventArgs e)
         {
+            currentId = 0;
+
             txtName.Text = "";
             txtIdNo.Text = "";
             dtpDOB.Value = DateTime.Today;
@@ -80,8 +83,18 @@ namespace CovidProject
             if (chkIsActive.Checked) checkedValue = 1;
 
             string sql = "";
-            sql = "INSERT INTO tblPatients(Name, IdNo, DOB, Gender, Country, IsActive) VALUES ('" + txtName.Text + "', " + txtIdNo.Text + ", '" + dtpDOB.Value.ToString("yyyyMMdd") + "', '" + cmbGender.Text + "', '" + txtCountry.Text + "', " + checkedValue + "   )   ";
-                        
+
+            if (currentId == 0)
+            {
+                sql = "INSERT INTO tblPatients(Name, IdNo, DOB, Gender, Country, IsActive) VALUES ('" + txtName.Text + "', " + txtIdNo.Text + ", '" + dtpDOB.Value.ToString("yyyyMMdd") + "', '" + cmbGender.Text + "', '" + txtCountry.Text + "', " + checkedValue + "   )   ";
+            }
+            else
+            {
+                sql = "UPDATE tblPatients SET Name = '" + txtName.Text + "', IdNo = " + txtIdNo.Text + ", DOB = '" + dtpDOB.Value.ToString("yyyyMMdd") + "', Gender = '" + cmbGender.Text + "', Country = '" + txtCountry.Text + "', IsActive = " + checkedValue + " WHERE PatientId = " + currentId;
+            }
+
+            MessageBox.Show(sql);
+
             SqlCommand cmd = new SqlCommand(sql, conn);
             cmd.ExecuteNonQuery();
 
@@ -96,6 +109,7 @@ namespace CovidProject
             frmSearchPatients frm = new frmSearchPatients();
             frm.ShowDialog();
             displayInfo(frm.selectedInteger);
+            currentId = frm.selectedInteger;
         }
 
         private void displayInfo(int id)
