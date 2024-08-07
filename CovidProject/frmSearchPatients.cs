@@ -49,5 +49,12 @@ namespace CovidProject
 
             conn.Close();
         }
+
+        private void lvwList_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (lvwList.FocusedItem == null) return;
+            int i = lvwList.FocusedItem.Index;
+            label1.Text = lvwList.Items[i].Text + " Name: " + lvwList.Items[i].SubItems[1].Text +"," + " IdNo: " + lvwList.Items[i].SubItems[2].Text;
+        }
     }
 }

@@ -36,6 +36,7 @@
             this.columnHeader5 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader6 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader7 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.label1 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // lvwList
@@ -59,6 +60,7 @@
             this.lvwList.TabIndex = 0;
             this.lvwList.UseCompatibleStateImageBehavior = false;
             this.lvwList.View = System.Windows.Forms.View.Details;
+            this.lvwList.SelectedIndexChanged += new System.EventHandler(this.lvwList_SelectedIndexChanged);
             // 
             // columnHeader1
             // 
@@ -95,11 +97,21 @@
             this.columnHeader7.Text = "Is Active";
             this.columnHeader7.Width = 150;
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(454, 442);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(51, 20);
+            this.label1.TabIndex = 1;
+            this.label1.Text = "label1";
+            // 
             // frmSearchPatients
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1000, 435);
+            this.ClientSize = new System.Drawing.Size(1000, 499);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.lvwList);
             this.Name = "frmSearchPatients";
             this.ShowIcon = false;
@@ -107,6 +119,7 @@
             this.Text = "Search Patients";
             this.Load += new System.EventHandler(this.frmSearchPatients_Load);
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -120,5 +133,6 @@
         private System.Windows.Forms.ColumnHeader columnHeader5;
         private System.Windows.Forms.ColumnHeader columnHeader6;
         private System.Windows.Forms.ColumnHeader columnHeader7;
+        private System.Windows.Forms.Label label1;
     }
 }
