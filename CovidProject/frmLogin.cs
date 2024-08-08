@@ -33,7 +33,7 @@ namespace CovidProject
 
             if (txtPassword.Text.Trim() == "")
             {
-                MessageBox.Show("User name required");
+                MessageBox.Show("Password required");
                 txtUserName.Focus();
                 return;
             }
