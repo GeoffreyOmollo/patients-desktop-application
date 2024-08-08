@@ -16,7 +16,7 @@ This project is a desktop application for storing and handling patients records.
 
 <img width="960" alt="1  Initial" src="https://github.com/user-attachments/assets/5a2ba3af-e3c9-4438-aa3d-3fcccea42084">
 
-------
+---
 
 <img width="457" alt="2  Validation" src="https://github.com/user-attachments/assets/2cc7dd49-3275-4440-94f3-c83c2ba05f94">
 
