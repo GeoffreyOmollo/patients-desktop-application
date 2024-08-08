@@ -106,6 +106,18 @@ namespace CovidProject
 
         private void MDIProject_Load(object sender, EventArgs e)
         {
+            this.Enabled = false;
+            frmLogin frm = new frmLogin();
+            frm.ShowDialog();
+
+            if (frm.SuccessfulLogin)
+            {
+                this.Enabled = true;
+            }
+            else 
+            { 
+                Application.Exit();
+            }
 
         }
 

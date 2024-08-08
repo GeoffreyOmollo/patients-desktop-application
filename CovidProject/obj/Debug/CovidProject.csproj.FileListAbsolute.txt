@@ -10,3 +10,4 @@ C:\Users\Geoffrey\Desktop\My Projects\Desktop\CovidProject\CovidProject\obj\Debu
 C:\Users\Geoffrey\Desktop\My Projects\Desktop\CovidProject\CovidProject\obj\Debug\CovidProject.pdb
 C:\Users\Geoffrey\Desktop\My Projects\Desktop\CovidProject\CovidProject\obj\Debug\CovidProject.frmSearchPatients.resources
 C:\Users\Geoffrey\Desktop\My Projects\Desktop\CovidProject\CovidProject\obj\Debug\CovidProject.MDIProject.resources
+C:\Users\Geoffrey\Desktop\My Projects\Desktop\CovidProject\CovidProject\obj\Debug\CovidProject.frmLogin.resources
